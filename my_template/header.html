@@ -1,0 +1,58 @@
+<header>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" runat="server" href="index.html">FASHION</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="ico-home"><a runat="server" ui-sref="home"><i class="fa fa-home"></i></a></li>
+                <li>
+                    <a style="cursor: pointer" data-toggle="dropdown" runat="server">Men</a>
+                    <ul class="dropdown-menu fadeIn animated">
+                        <li><a ui-sref="shirt-men">Shirt</a></li>
+                        <li><a ui-sref="tshirt-men">T-shirt</a></li>
+                        <li><a ui-sref="jean-men">Jeans</a></li>
+                        <li><a ui-sref="suit-men">Suits</a></li>
+                        <li><a ui-sref="pant-men">Pants</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a style="cursor: pointer" data-toggle="dropdown" runat="server">Women</a>
+                    <ul class="dropdown-menu fadeIn animated">
+                        <li><a href="dress-women">Dress</a></li>
+                        <li><a href="jean-women">Jeans</a></li>
+                        <li><a href="shirt-women">Shirt</a></li>
+                        <li><a href="suit-women">Suits</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--Visible,hide navigation-->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="search-hide">
+                        <input type="text" maxlength="35" size="35" placeholder="Search By Name..." />
+                        <a href="#"><i class="fa fa-search"></i></a>
+                    </div>
+                </li>
+                <li class="your-cart">
+                    <p>Your Cart: <a class="bag" ui-sref="cart">
+                    <i class="fa fa-shopping-bag"><span class="badge" ng-bind="numcart">0</span></i>
+                    </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="nav navbar-nav navbar-right navbar-form">
+            <input type="text" maxlength="35" size="35" placeholder="Search By Name" />
+            <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+        <!--Visible,hide navigation-->
+    </div>
+</nav>
+</header>

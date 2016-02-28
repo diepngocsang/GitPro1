@@ -1,0 +1,47 @@
+<div ng-controller="DetailProductCtrl"></div>
+   <div class="container text-center">
+    <h1>DETAILS</h1>
+    <br>
+    <hr />
+    <div class="row container" ng-repeat="item in data">
+<!--       ng-show="$state.is('detail')" ng-click="$state.go('product')" -->
+       <div class="col-xs-12 col-sm-6 col-md-6">
+           <img src="imgs/{{item.img}}" alt="">
+       </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pro-detail-content">
+            <h3 class="pro-detail">{{item.name}}</h3> 
+            <div class="table-detail">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Code:</th>
+                        <td>{{item.code}}</td>
+                    </tr>
+                     <tr>
+                            <th>Corlor:</th>
+                            <td>{{item.color}}</td>
+                        </tr>
+                        <tr>
+                            <th>Made in:</th>
+                            <td>{{item.made}}</td>
+                        </tr>                        
+                        <tr>
+                            <th>Material:</th>
+                            <td>{{item.material}}</td>
+                        </tr>
+                        <tr class="display-none">
+                            <th>Description:</th>
+                            <td>{{item.description}}</td>
+                        </tr>
+                        <tr>
+                            <th>Price:</th>
+                            <th>{{item.price}}$</td>
+                        </tr> 
+                </table>
+            </div>
+        </div>
+        <div class="wow btn-add tada animated">
+            <a style="cursor: pointer" ng-click="addProductItem(item)"><i class="fa fa-cart-plus ico-cart"></i></i></a>
+        </div>
+    </div>
+</div>
+<br>
