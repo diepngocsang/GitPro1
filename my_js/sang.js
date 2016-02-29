@@ -1,4 +1,3 @@
-//function ItemService() {}
 angular.module('myProject', ['firebase','ui.router'])
     //DIRECTIVE
 	.directive('headerDirective', function () {
@@ -32,120 +31,65 @@ angular.module('myProject', ['firebase','ui.router'])
     
     //CONFIG
 	.config(function($stateProvider, $urlRouterProvider) {    
-        $urlRouterProvider.otherwise('/home'); // Mọi đường dẫn không hợp lệ đều được chuyển đến state home
+        $urlRouterProvider.otherwise('/home'); 
         $stateProvider
-            .state('home', {    // Định ngĩa 1 state home
-                url: '/home',  // khai báo Url hiển thị
-                templateUrl: 'my_template/home.html'  // đường dẫn view
+            .state('home', {    
+                url: '/home',  
+                templateUrl: 'my_template/home.html'
                 })
-            .state('tshirt-men', {    // Định ngĩa 1 state home
-                    url: '/tshirt-men',  // khai báo Url hiển thị
-                    templateUrl: 'my_template/product.html',  // đường dẫn view
-                    controller: 'TShirtMenProductCtrl'             
+            .state('product-men', {   
+                        url: '/product-men/:type',  
+                        templateUrl: 'my_template/product.html',  
+                        controller: 'ProductMenCtrl'                                 
                 })
-            .state('shirt-men', {    // Định ngĩa 1 state home
-                        url: '/shirt-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'ShirtMenProductCtrl'             
-                    })
-            .state('jean-men', {    // Định ngĩa 1 state home
-                        url: '/jean-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'JeanMenProductCtrl'             
-                    })
-            .state('suit-men', {    // Định ngĩa 1 state home
-                        url: '/suit-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'SuitMenProductCtrl'             
-                    })
-            .state('pant-men', {    // Định ngĩa 1 state home
-                        url: '/pant-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'PantMenProductCtrl'             
-                    })
-        //------------------------------------------------------------------------------------------------//
-            .state('dress-girl', {    // Định ngĩa 1 state home
-                    url: '/tshirt-men',  // khai báo Url hiển thị
-                    templateUrl: 'my_template/product.html',  // đường dẫn view
-                    controller: 'DressGirlProductCtrl'             
+            .state('product-women', {   
+                        url: '/product-women/:type',  
+                        templateUrl: 'my_template/product.html',  
+                        controller: 'ProductWomenCtrl'                                 
                 })
-            .state('jean-girl', {    // Định ngĩa 1 state home
-                        url: '/shirt-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'JeanGirlProductCtrl'             
-                    })
-            .state('shirt-girl', {    // Định ngĩa 1 state home
-                        url: '/jean-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'ShirtGirlProductCtrl'             
-                    })
-            .state('suit-girl', {    // Định ngĩa 1 state home
-                        url: '/suit-men',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/product.html',  // đường dẫn view
-                        controller: 'SuitGirlProductCtrl'             
-                    })
-        //-----------------------------------------------------------------------------------------------------//
-            .state('detail', {    // Định ngĩa 1 state home
-                        url: '/detail/:code',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/productdetail.html',  // đường dẫn view
+            .state('detail', {    
+                        url: '/detail/:code', 
+                        templateUrl: 'my_template/productdetail.html', 
                         controller: 'DetailProductCtrl'                                 
                 })
-            .state('cart', {    // Định ngĩa 1 state home
-                        url: '/cart',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/cartproduct.html'  // đường dẫn view
-//                        controller: 'CartProductController'                                 
+            .state('search-product', {    
+                        url: '/search-product/:name', 
+                        templateUrl: 'my_template/product.html', 
+                        controller: 'SearchProductCtrl'                                 
                 })
-            
+            .state('cart', {   
+                        url: '/cart',  // khai báo Url hiển thị
+                        templateUrl: 'my_template/cartproduct.html'                                   
+                })
+                        
     })
     
     //CONTROLLER
-    .controller("TShirtMenProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_men");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('T-shirt'));
+    .controller("ProductMenCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
+         var ref = new Firebase("https://finalassignment.firebaseio.com/product/product_men");
+         var type = $stateParams.type;
+        $scope.data = $firebaseObject(ref.orderByChild('type').equalTo(type).limitToFirst(4));
     }])
-    .controller("ShirtMenProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_men");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Shirt'));
-    }])
-    .controller("JeanMenProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_men");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Jean'));
-    }])
-    .controller("SuitMenProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_men");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Suit'));
-    }])
-    .controller("PantMenProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_men");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Pant'));
-    }])
-//--------------------------------------------------------------------------------------------------//
-    .controller("DressGirlProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
+    .controller("ProductWomenCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
          var ref = new Firebase("https://finalassignment.firebaseio.com/product_women");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Dress'));
+         var type = $stateParams.type;
+        $scope.data = $firebaseObject(ref.orderByChild('type').equalTo(type));
     }])
-    .controller("JeanGirlProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_women");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Jean'));
+    .controller("SearchProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){          
+         var inputvalue = $stateParams.name;
+
     }])
-    .controller("ShirtGirlProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_women");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Shirt'));
-    }])
-    .controller("SuitGirlProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_women");
-         $scope.data = $firebaseObject(ref.orderByChild('type').equalTo('Suit'));
-    }])
-//-----------------------------------------------------------------------------------------------------//
     .controller("DetailProductCtrl",['$scope','$firebaseObject','$stateParams',function($scope,$firebaseObject,$stateParams){
-         var ref = new Firebase("https://finalassignment.firebaseio.com/product_men");
+         var ref = new Firebase("https://finalassignment.firebaseio.com/product/product_men");
          var code = $stateParams.code;
         $scope.data = $firebaseObject(ref.orderByChild('code').equalTo(code));
     }])
+    
     .controller('homeController',['$scope', function ($scope){
         $scope.numcart=0;
         $scope.choose=1;
         $scope.shopcart=[];
+        $scope.user={};
         $scope.delProductItem = function(code){
             $scope.shopcart.splice($scope.shopcart.indexOf(code),1);
             $scope.numcart = $scope.numcart - 1;
@@ -159,6 +103,23 @@ angular.module('myProject', ['firebase','ui.router'])
             window.alert('This product that contained in your cart');
             };
         };
+        $scope.addCartToFirebase = function(){
+          var ref = new Firebase("https://finalassignment.firebaseio.com/cart");
+          var postsRef = ref.child("post");
+          var newPostRef = postsRef.push($scope.user);
+          newPostRef.set({
+            first_name: $scope.user.first,
+            last_name: $scope.user.last,
+            email: $scope.user.email,
+            address: $scope.user.address,
+            phone: $scope.user.phone,  
+          });
+          // we can also chain the two calls together
+//          postsRef.push().set({
+//            author: "alanisawesome",
+//            title: "The Turing Machine"
+//          });
+        }
     }])
 //    .controller('CartProductController',['$scope',function ($scope){
 //        $scope.choose=1;

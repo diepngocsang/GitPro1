@@ -39,36 +39,36 @@
                         <div class="form-group">
                             <label class="control-label col-md-3" for="txtFirstName">First Name:</label>
                             <div class="col-md-9">
-                                <input id="txtFirstName" class="form-control" type="text" placeholder="First Name" required="required">
+                                <input id="txtFirstName" class="form-control" ng-model="user.first" type="text" placeholder="First Name" required="required">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3" for="txtLastName">Last Name:</label>
                             <div class="col-md-9">
-                                <input id="txtLastName" class="form-control" type="text" placeholder="Last Name" required="required">
+                                <input id="txtLastName" ng-model="user.last" class="form-control" type="text" placeholder="Last Name" required="required">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3" for="txtEmail">E-mail:</label>
                             <div class="col-md-9">
-                                <input id="txtEmail" class="form-control" type="email" placeholder="E-mail" data-type="email" required="required">
+                                <input id="txtEmail" ng-model="user.email" class="form-control" type="email" placeholder="E-mail" data-type="email" required="required">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3" for="txtAddress">Address:</label>
                             <div class="col-md-9">
-                                <input id="txtAddress" class="form-control" type="text" placeholder="Address" required="required">
+                                <input id="txtAddress" ng-model="user.address" class="form-control" type="text" placeholder="Address" required="required">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3" for="txtPhone">Phone No.:</label>
                             <div class="col-md-9">
-                                <input id="txtPhone" class="form-control" type="tel" placeholder="Phone Number" required="required">
+                                <input id="txtPhone" ng-model="user.phone" class="form-control" type="tel" placeholder="Phone Number" required="required">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <button class="btn" type="submit">Confirm</button>
+                                <button class="btn" ng-click="addCartToFirebase()" type="submit">Confirm</button>
                             </div>
                         </div>
                     </div>
