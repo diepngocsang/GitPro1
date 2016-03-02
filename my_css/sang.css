@@ -272,3 +272,14 @@ input[type='text'] {
   color: red;
   font-size: 15px;
   text-align: center; }
+.btn-paging{
+    background-color: white;
+    color: skyblue;
+    border: 1px solid skyblue;
+    font-weight: bolder;
+}
+.text-paging{
+    color: darkgray;
+    font-style: italic;
+    font-weight: bold;
+}

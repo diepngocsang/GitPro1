@@ -16,7 +16,7 @@
                             <td>{{item.code}}</td>
                             <td><a  ui-sref="detail({code: item.code})">{{item.name}}</a></td>
                             <td>
-                                <select ng-model="choose">
+                                <select ng-model="item.quantity">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -24,12 +24,12 @@
                                     <option value="5">5</option>
                                 </select>
                             </td>
-                            <td>{{choose*item.price}}$</td>
+                            <td ng-bind="item.quantity*{{item.price}}"></td>
                             <td><i style="cursor: pointer" class="fa fa-times" ng-click="delProductItem(item)"></i></td>
                         </tr>                        
                     </table>
                     <div class="total-price">
-                        <p>Total($): {{pricepro}}$</p>
+                        <p>Total($): 1234$</p>
                     </div>
                 </div>
                 <div class="col-md-5">
