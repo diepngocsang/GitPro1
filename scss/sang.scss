@@ -15,6 +15,7 @@ $color_danube_approx: #63a3d2;
 $color_antique_bronze_approx: #704500;
 $color_alizarin_crimson_approx: #e62117;
 $color_seagull_approx: skyblue;
+$color_royal_purple_approx: rebeccapurple;
 
 //fonts
 $font_0: Iskoola Pota;
@@ -22,8 +23,6 @@ $font_0: Iskoola Pota;
 footer {
 	background-color: $color_pale_slate_approx;
 	padding: 25px;
-	position: relative;
-	bottom: 0;
 	width: 100%;
 	h4 {
 		text-align: left;
@@ -234,6 +233,9 @@ input[type='text'] {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.num-cart {
+	margin-left: 2px;
+}
 .detail-content-div {
 	float: right;
 }
@@ -318,18 +320,28 @@ input[type='text'] {
 		max-height: 400px;
 	}
 }
-@media(min-height: 1000px) {
-	footer {
-		position: fixed;
+@media(min-width: 768px) {
+	.container {
+		width: 100%;
 	}
 }
 @media(max-width: 768px) {
-	.img-detail {
-		height: 300px;
-		max-height: 300px;
-	}
 	.small-img-div {
 		display: none;
+	}
+	.hidden-small-img {
+		display: none;
+	}
+	.large-img-div {
+		margin-left: 100px;
+		margin-top: 50px;
+	}
+}
+@media(max-width: 320px) {
+	.large-img-div {
+		margin-left: 30px;
+		margin-top: 10px;
+		width: 80%;
 	}
 }
 @media(max-width: 740px) {
@@ -338,6 +350,10 @@ input[type='text'] {
 	}
 	.small-img-div {
 		display: none;
+	}
+	.large-img-div {
+		width: 80%;
+		margin-left: 30px;
 	}
 	.carousel-caption {
 		display: none;
@@ -348,10 +364,6 @@ input[type='text'] {
 	.search-hide {
 		display: none;
 		float: left;
-	}
-	.img-responsive {
-		height: 300px;
-		max-height: 300px;
 	}
 	.product {
 		padding-top: 0;
@@ -388,6 +400,9 @@ input[type='text'] {
 	color: $color_shady_lady_approx;
 	font-style: italic;
 	font-weight: bold;
+}
+.test {
+	color: $color_royal_purple_approx;
 }
 .pro-detail-img img {
 	width: 80%;
