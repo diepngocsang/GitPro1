@@ -8,10 +8,13 @@ $black_20: rgba(0, 0, 0, 0.2);
 $color_sail_approx: #b2e7fa;
 $red: red;
 $color_cerulean_approx: deepskyblue;
+$color_shady_lady_approx: darkgray;
+$color_quill_gray_approx: lightgray;
 $color_san_marino_approx: #49659f;
 $color_danube_approx: #63a3d2;
 $color_antique_bronze_approx: #704500;
 $color_alizarin_crimson_approx: #e62117;
+$color_seagull_approx: skyblue;
 
 //fonts
 $font_0: Iskoola Pota;
@@ -19,6 +22,9 @@ $font_0: Iskoola Pota;
 footer {
 	background-color: $color_pale_slate_approx;
 	padding: 25px;
+	position: relative;
+	bottom: 0;
+	width: 100%;
 	h4 {
 		text-align: left;
 		font-weight: bold;
@@ -33,7 +39,6 @@ footer {
 	}
 }
 td {
-	font-size: 12px;
 	text-align: left;
 	font-size: 12px;
 }
@@ -103,7 +108,6 @@ input[type='text'] {
 }
 .img-responsive {
 	height: 350px;
-	max-height: 350px;
 }
 .bag {
 	color: $white;
@@ -209,28 +213,132 @@ input[type='text'] {
 	display: none;
 }
 .ico-cart {
-	color: $black;
-	&:hover {
-		color: $color_cerulean_approx;
-	}
+	color: $white;
+	padding-bottom: 3px;
+	text-align: left;
+	font-size: 20px;
+	padding-right: 10px;
+	padding-top: 3px;
 }
 .pro-detail {
 	text-align: left;
+	color: $color_cerulean_approx;
+	font-size: 25px;
+}
+.img-content {
+	margin-left: 100px;
+}
+.detail-content {
+	text-align: left;
+	padding-left: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.detail-content-div {
+	float: right;
+}
+.large-img-div {
+	padding-top: 0 !important;
+}
+.name-detail {
+	color: $color_shady_lady_approx;
+	font-size: 40px;
 	font-weight: bold;
 }
-.table-detail {
-	border: 0;
+.price-detail {
+	color: $color_cerulean_approx;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: normal;
+}
+.price-cart {
 	padding-left: 0;
-	th {
-		font-size: 12px;
+}
+.button-add-to-cart {
+	width: 200px;
+	height: 30px;
+	background-color: $color_quill_gray_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	color: $white;
+	font-size: 28px;
+	border: 0;
+	padding-bottom: 45px;
+	&:hover {
+		background-color: $gray;
 	}
+}
+.img-small-div {
+	margin-top: 10px;
+}
+.line-detail {
+	border-bottom: 1px solid $gray;
+	width: 60%;
+	padding-top: 20px;
+}
+.img-detail {
+	height: 500px;
+	width: 300px;
+}
+.img-small-detail {
+	width: 100px;
+	height: 150px;
+}
+.span-button {
+	padding-left: 50px;
+}
+.text-cart {
+	padding-top: 3px;
+	font-size: 15px;
+	padding-left: 15px;
+	border-left: 1px solid $white;
+}
+.pro-desc {
+	font-size: 18px;
+	color: $black;
+	padding-top: 20px;
+}
+.content-ship {
+	font-style: oblique;
+	font-size: 13px;
+	text-align: justify;
 }
 .btn-add {
 	float: left;
 	text-align: center;
 	font-size: 60px;
 }
+.img-cart {
+	width: 300px;
+	height: 100px;
+}
+@media(max-width: 1000px) {
+	.img-detail {
+		margin-left: 0;
+		max-height: 400px;
+	}
+}
+@media(min-height: 1000px) {
+	footer {
+		position: fixed;
+	}
+}
+@media(max-width: 768px) {
+	.img-detail {
+		height: 300px;
+		max-height: 300px;
+	}
+	.small-img-div {
+		display: none;
+	}
+}
 @media(max-width: 740px) {
+	.img-detail {
+		height: 100%;
+	}
+	.small-img-div {
+		display: none;
+	}
 	.carousel-caption {
 		display: none;
 	}
@@ -269,6 +377,17 @@ input[type='text'] {
 	footer h4 {
 		text-align: center;
 	}
+}
+.btn-paging {
+	background-color: $white;
+	color: $color_seagull_approx;
+	border: 1px solid $color_seagull_approx;
+	font-weight: bolder;
+}
+.text-paging {
+	color: $color_shady_lady_approx;
+	font-style: italic;
+	font-weight: bold;
 }
 .pro-detail-img img {
 	width: 80%;
