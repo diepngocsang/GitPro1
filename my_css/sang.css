@@ -297,6 +297,10 @@ input[type='text'] {
       position: fixed;
     }
 }
+@media (min-width: 768px)
+.container {
+    width: 100%;
+}
 @media (max-width: 768px){
         
     .img-detail{    
