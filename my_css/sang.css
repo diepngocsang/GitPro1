@@ -284,7 +284,9 @@ input[type='text'] {
     width: 300px;
     height: 100px;
 }
-
+.fa-chevron-right{
+    padding-right: 10px;
+}
 @media (max-width: 1000px){
     .img-detail{
         margin-left: 0;
