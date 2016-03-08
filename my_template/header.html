@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav">
                 <li class="ico-home"><a runat="server" ui-sref="home"><i class="fa fa-home"></i></a></li>
                 <li>
-                    <a style="cursor: pointer" data-toggle="dropdown" runat="server">Men</a>
+                    <a style="cursor: pointer" data-toggle="dropdown" runat="server" >Men</a>
                     <ul class="dropdown-menu fadeIn animated">
                         <li><a ui-sref="product({type: 'Shirt Men'})">Shirt</a></li>
                         <li><a ui-sref="product({type: 'T-shirt Men'})">T-shirt</a></li>
@@ -27,7 +27,7 @@
                     <ul class="dropdown-menu fadeIn animated">
                         <li><a ui-sref="product({type: 'Dress Girl'})">Dress</a></li>
                         <li><a ui-sref="product({type: 'Jean Girl'})">Jeans</a></li>
-                        <li><a ui-sref="product({type: 'Shirt Girl'})">T-shirt</a></li>
+                        <li><a ui-sref="product({type: 'Shirt Girl'})">Shirt</a></li>
                         <li><a ui-sref="product({type: 'Suit Girl'})">Suits</a></li>
                     </ul>
                 </li>
@@ -36,20 +36,20 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <div class="search-hide">
-                        <input type="text" maxlength="35" size="35" placeholder="Search By Name..." ng-model="search"/>
+                        <input type="text" maxlength="35" size="35" placeholder="Search By Name..." style="width: 170px;" ng-model="search"/>
                         <a ui-sref="search-product({name: search})"><i class="fa fa-search"></i></a>
                     </div>
                 </li>
                 <li class="your-cart">
                     <p>Your Cart: <a class="bag" ui-sref="cart">
-                    <i class="fa fa-shopping-bag"><span class="badge" ng-bind="numcart">0</span></i>
+                    <i class="fa fa-shopping-bag"><span class="badge num-cart" ng-bind="numcart">0</span></i>
                     </a>
                     </p>
                 </li>
             </ul>
         </div>
         <div class="nav navbar-nav navbar-right navbar-form">
-            <input type="text" maxlength="35" size="35" placeholder="Search By Name" ng-model="search"/>
+            <input type="text" maxlength="35" size="35" placeholder="Search By Name" style="width: 170px;" ng-model="search"/>
             <a ui-sref="search-product({name: search})"><i class="fa fa-search"></i></a>
         </div>
         <!--Visible,hide navigation-->

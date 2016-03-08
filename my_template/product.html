@@ -1,3 +1,4 @@
+
 <div class="container text-center">
     <h1>FASHION's Products</h1>
     <br>
@@ -12,10 +13,10 @@
     </div>
     <div class="row product bounceInLeft animated" ui-view>
         <div it='data' class="col-xs-12 col-sm-3 col-md-3" ng-repeat="datas in data | orderBy: chooseprice | Paging:nowPage*sizePage | limitTo:sizePage">
-             <a ui-sref="detail({code: datas.code})"><img src="imgs/{{datas.img}}" class="" style="width: 80%; height:80%" alt="Image"/></a>
+             <a ui-sref="detail({code: datas.code})"><img src="imgs/product/{{datas.img1}}" class="" style="width: 80%; height:80%" alt="Image"/></a>
             <div class="caption">
                 <h5>{{datas.name}}</h5>
-                <p>Price: {{datas.price}}$</p>            
+                <p>Price: ${{datas.price}}.00</p>            
             </div>
         </div>
     </div>
