@@ -103,14 +103,18 @@ input[type='text'] {
   height: 350px; }
 
 /* line 110, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+.fa-chevron-right {
+  padding-right: 10px; }
+
+/* line 113, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .bag {
   color: white;
   font-size: 15px; }
-  /* line 113, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 116, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .bag:hover {
     color: #b2e7fa; }
 
-/* line 117, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 120, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .img-footer {
   clear: both;
   float: left;
@@ -118,93 +122,93 @@ input[type='text'] {
   height: 50px;
   padding-left: 0; }
 
-/* line 124, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 127, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .total-price {
   text-align: left;
   font-weight: bold;
   margin-top: 10px; }
 
-/* line 129, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 132, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-search {
   color: white;
   font-size: 20px; }
 
-/* line 133, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 136, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .ico-home {
   font-size: 20px; }
 
-/* line 136, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 139, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 #table {
   text-align: center;
   padding-left: 0; }
-  /* line 139, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 142, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   #table td {
     padding-bottom: 5px;
     border: 2px solid gray;
     text-align: center;
     padding-top: 1px; }
-  /* line 145, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 148, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   #table th {
     border: 2px solid gray;
     text-align: center;
     background-color: #c3c3c3; }
 
-/* line 151, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 154, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-md-4 {
   padding: 5px; }
-  /* line 153, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 156, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .col-md-4 > p {
     text-align: justify; }
 
-/* line 157, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 160, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-md-8 {
   padding: 5px; }
 
-/* line 160, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 163, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-md-12 {
   padding: 5px; }
 
-/* line 163, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 166, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .logo {
   width: 300px;
   height: 80px; }
 
-/* line 167, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 170, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-icon {
   width: 30px;
   height: 30px; }
 
-/* line 171, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 174, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .your-cart {
   margin-left: 15px; }
 
-/* line 175, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 178, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-md-5 .infor-user {
   border: 2px solid gray;
   padding-right: 10px;
   padding-left: 10px; }
 
-/* line 180, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 183, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-md-5 h5 {
   font-weight: bold;
   font-size: 18px;
   padding-top: 50px; }
 
-/* line 185, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 188, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-md-5 .regist {
   text-align: left;
   font-size: 13px; }
 
-/* line 190, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 193, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .form-control {
   font-size: 13px; }
 
-/* line 193, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 196, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .confirm {
   text-align: left;
   font-weight: normal; }
 
-/* line 197, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 200, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .btn {
   background-color: #c3c3c3;
   color: gray;
@@ -212,17 +216,17 @@ input[type='text'] {
   margin-bottom: 50px;
   float: right;
   margin-right: 10px; }
-  /* line 204, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 207, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .btn:hover {
     background-color: red;
     color: white;
     font-weight: bold; }
 
-/* line 210, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 213, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .navbar-form {
   display: none; }
 
-/* line 213, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 216, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .ico-cart {
   color: white;
   padding-bottom: 3px;
@@ -231,53 +235,53 @@ input[type='text'] {
   padding-right: 10px;
   padding-top: 3px; }
 
-/* line 221, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 224, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .pro-detail {
   text-align: left;
   color: deepskyblue;
   font-size: 25px; }
 
-/* line 226, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 229, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .img-content {
   margin-left: 100px; }
 
-/* line 229, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 232, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .detail-content {
   text-align: left;
   padding-left: 20px;
   padding-top: 30px;
   padding-bottom: 30px; }
 
-/* line 235, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 238, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .num-cart {
   margin-left: 2px; }
 
-/* line 238, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 241, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .detail-content-div {
   float: right; }
 
-/* line 241, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 244, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .large-img-div {
   padding-top: 0 !important; }
 
-/* line 244, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 247, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .name-detail {
   color: darkgray;
   font-size: 40px;
   font-weight: bold; }
 
-/* line 249, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 252, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .price-detail {
   color: deepskyblue;
   font-size: 30px;
   font-weight: bold;
   font-style: normal; }
 
-/* line 255, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 258, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .price-cart {
   padding-left: 0; }
 
-/* line 258, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 261, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .button-add-to-cart {
   width: 200px;
   height: 30px;
@@ -287,203 +291,203 @@ input[type='text'] {
   font-size: 28px;
   border: 0;
   padding-bottom: 45px; }
-  /* line 268, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 271, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .button-add-to-cart:hover {
     background-color: gray; }
 
-/* line 272, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 275, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .img-small-div {
   margin-top: 10px; }
 
-/* line 275, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 278, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .line-detail {
   border-bottom: 1px solid gray;
   width: 60%;
   padding-top: 20px; }
 
-/* line 280, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 283, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .img-detail {
   height: 500px;
   width: 300px; }
 
-/* line 284, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 287, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .img-small-detail {
   width: 100px;
   height: 150px; }
 
-/* line 288, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 291, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .span-button {
   padding-left: 50px; }
 
-/* line 291, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 294, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .text-cart {
   padding-top: 3px;
   font-size: 15px;
   padding-left: 15px;
   border-left: 1px solid white; }
 
-/* line 297, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 300, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .pro-desc {
   font-size: 18px;
   color: black;
   padding-top: 20px; }
 
-/* line 302, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 305, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .content-ship {
   font-style: oblique;
   font-size: 13px;
   text-align: justify; }
 
-/* line 307, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 310, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .btn-add {
   float: left;
   text-align: center;
   font-size: 60px; }
 
-/* line 312, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 315, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .img-cart {
   width: 300px;
   height: 100px; }
 
 @media (max-width: 1000px) {
-  /* line 317, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 320, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .img-detail {
     margin-left: 0;
     max-height: 400px; } }
 
 @media (max-width: 768px) {
-  /* line 323, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 326, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .small-img-div {
     display: none; }
-  /* line 326, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 329, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .hidden-small-img {
     display: none; }
-  /* line 329, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 332, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .large-img-div {
     margin-left: 100px;
     margin-top: 50px; } }
 
 @media (max-width: 320px) {
-  /* line 335, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 338, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .large-img-div {
     margin-left: 30px;
     margin-top: 10px;
     width: 80%; } }
 
 @media (max-width: 740px) {
-  /* line 342, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 345, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .img-detail {
     height: 100%; }
-  /* line 345, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 348, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .small-img-div {
     display: none; }
-  /* line 348, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 351, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .large-img-div {
     width: 80%;
     margin-left: 30px; }
-  /* line 352, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 355, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .carousel-caption {
     display: none; }
-  /* line 355, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 358, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .filter {
     float: inherit; }
-  /* line 358, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 361, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .search-hide {
     display: none;
     float: left; }
-  /* line 362, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 365, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .product {
     padding-top: 0; }
-  /* line 365, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 368, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .navbar-form {
     display: block; }
-  /* line 368, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 371, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .font-awe {
     text-align: center; }
-  /* line 371, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 374, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .table-detail {
     width: 100%; }
-  /* line 374, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 377, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .pro-detail-content {
     text-align: center; }
-  /* line 377, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 380, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .display-none {
     display: none; }
-  /* line 380, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 383, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   .col-sm-8 p {
     display: none; }
-  /* line 383, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+  /* line 386, E:/FinalAss_2/Version_final/my_scss/sang.scss */
   footer h4 {
     text-align: center; } }
 
-/* line 387, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 390, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .btn-paging {
   background-color: white;
   color: skyblue;
   border: 1px solid skyblue;
   font-weight: bolder; }
 
-/* line 393, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 396, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .text-paging {
   color: darkgray;
   font-style: italic;
   font-weight: bold; }
 
-/* line 398, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 401, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .pro-detail-img img {
   width: 80%;
   height: 80%;
   margin-bottom: 50px;
   margin-top: 20px; }
 
-/* line 404, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 407, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .dropdown-menu li {
   padding-top: 10px; }
 
-/* line 407, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 410, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .carousel-inner img {
   width: 100%;
   margin: auto;
   min-height: 200px;
   max-height: 400px; }
 
-/* line 413, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 416, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-facebook-square:hover {
   color: #49659f; }
 
-/* line 416, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 419, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-twitter-square:hover {
   color: #63a3d2; }
 
-/* line 419, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 422, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-instagram:hover {
   color: #704500; }
 
-/* line 422, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 425, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-youtube-square:hover {
   color: #e62117; }
 
-/* line 425, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 428, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .dropdown:hover .dropdown-content {
   display: block; }
 
-/* line 428, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 431, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-sm-3 h5 {
   font-weight: bold; }
 
-/* line 431, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 434, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-sm-4 p {
   font-family: Iskoola Pota;
   font-size: 25px;
   font-style: italic; }
 
-/* line 436, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 439, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .col-sm-8 p {
   text-align: center;
   padding: 100px;
   font-size: 18px; }
 
-/* line 441, E:/FinalAss_2/Version_final/my_scss/sang.scss */
+/* line 444, E:/FinalAss_2/Version_final/my_scss/sang.scss */
 .fa-times:hover {
   color: red;
   font-size: 15px;
