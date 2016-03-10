@@ -287,6 +287,14 @@ input[type='text'] {
     height: 100px;
 }
 
+@media (max-width: 1000px){
+    .img-detail{
+        margin-left: 0;
+        max-height: 400px;
+    }
+    
+}
+
 @media (max-width: 768px){
     .small-img-div{
     display: none;
