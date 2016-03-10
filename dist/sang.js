@@ -47,7 +47,7 @@ angular.module('myProject', ['firebase','ui.router'])
                 })
             .state('cart', {   
                         url: '/cart',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/cartproduct.html'                                   
+                        templateUrl: 'my_template/cartproduct.html'
                 })
             .state('img', {   
                         url: '/img/:img',  // khai báo Url hiển thị

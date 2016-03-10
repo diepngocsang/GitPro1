@@ -47,7 +47,7 @@ angular.module('myProject', ['firebase','ui.router'])
                 })
             .state('cart', {   
                         url: '/cart',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/cartproduct.html'                                   
+                        templateUrl: 'my_template/cartproduct.html'
                 })
             .state('img', {   
                         url: '/img/:img',  // khai báo Url hiển thị
@@ -62,11 +62,11 @@ angular.module('myProject', ['firebase','ui.router'])
         }
     })
     .controller("ProductCtrl",['$scope','$firebaseArray','$stateParams',function($scope,$firebaseArray,$stateParams){
-         $scope.nowPage = 0;
-         $scope.sizePage = 8;
          var ref = new Firebase("https://finalassignment.firebaseio.com/product");
          var type = $stateParams.type;
          $scope.data = $firebaseArray(ref.orderByChild('type').equalTo(type));
+         $scope.nowPage = 0;
+         $scope.sizePage = 8;
          $scope.totalPage=function(){
             return Math.ceil($scope.data.length/$scope.sizePage);                
          }
@@ -115,6 +115,11 @@ angular.module('myProject', ['firebase','ui.router'])
         $scope.addCartToFirebase = function(){         
             var ref = new Firebase("https://finalassignment.firebaseio.com/cart/post");
             $scope.postsRef = $firebaseArray(ref);
+//            it('should toggle button', function() {
+//                  expect(element(by.css('button')).getAttribute('disabled')).toBeFalsy();
+//                  element(by.model('checked')).click();
+//                  expect(element(by.css('button')).getAttribute('disabled')).toBeTruthy();
+//            });
             $scope.quantity= $scope.shopcart;
             $scope.user.item = $scope.shopcart;
             var confirmAlert = confirm("Do you want to order these products?");
@@ -124,6 +129,9 @@ angular.module('myProject', ['firebase','ui.router'])
                 $scope.shopcart=null;
                 $scope.numcart=0;
                 window.alert("Thank you to order our products! We will contact to you as soon as possible to confirm your order!");
+                // change the path
+//                $location.path('/home');
+//                $scope.location.path();
             }       
         };
         $scope.getTotal = function(items){
