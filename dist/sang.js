@@ -64,6 +64,7 @@ angular.module('myProject', ['firebase','ui.router'])
     .controller("ProductCtrl",['$scope','$firebaseArray','$stateParams',function($scope,$firebaseArray,$stateParams){
          var ref = new Firebase("https://finalassignment.firebaseio.com/product");
          var type = $stateParams.type;
+         $scope.type= type;
          $scope.data = $firebaseArray(ref.orderByChild('type').equalTo(type));
          $scope.nowPage = 0;
          $scope.sizePage = 8;
