@@ -84,6 +84,9 @@ angular.module('myProject', ['firebase','ui.router'])
          
     }])    
     .controller('homeController',['$scope','$firebaseArray', function ($scope,$firebaseArray){
+        $scope.collapsein = function() {
+            $('.navbar-collapse').toggleClass('in');
+        }
         $scope.numcart=0;
         $scope.shopcart=[];
         $scope.user={};
@@ -115,11 +118,6 @@ angular.module('myProject', ['firebase','ui.router'])
         $scope.addCartToFirebase = function(){         
             var ref = new Firebase("https://finalassignment.firebaseio.com/cart/post");
             $scope.postsRef = $firebaseArray(ref);
-//            it('should toggle button', function() {
-//                  expect(element(by.css('button')).getAttribute('disabled')).toBeFalsy();
-//                  element(by.model('checked')).click();
-//                  expect(element(by.css('button')).getAttribute('disabled')).toBeTruthy();
-//            });
             $scope.quantity= $scope.shopcart;
             $scope.user.item = $scope.shopcart;
             var confirmAlert = confirm("Do you want to order these products?");
