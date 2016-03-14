@@ -99,7 +99,7 @@ angular.module('myProject', ['firebase','ui.router'])
             }            
         };        
         $scope.addProductItem = function(code){            
-            if($scope.shopcart.indexOf(code)<0){
+            if($scope.shopcart.indexOf(code)<=0){
                 var checkCode = true;
                 code.quantity=1;
                 for (var i = 0;i< $scope.shopcart.length;i++) {
@@ -125,7 +125,7 @@ angular.module('myProject', ['firebase','ui.router'])
             if (confirmAlert == true) {
                 $scope.postsRef.$add($scope.user);
                 $scope.user=null;
-                $scope.shopcart=null;
+                $scope.shopcart=[];
                 $scope.numcart=0;
                 window.alert("Thank you to order our products! We will contact to you as soon as possible to confirm your order!");
                 // change the path
