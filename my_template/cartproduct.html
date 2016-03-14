@@ -16,7 +16,7 @@
                     <td>{{item.code}}</td>
                     <td><a  ui-sref="detail({code: item.code})">{{item.name}}</a></td>
                     <td>
-                        <select ng-model="item.quantity"  ng-init="item.quantity = 1">
+                        <select ng-model="item.quantity"  ng-init="item.quantity">
                             <option value="1" selected="selected">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
