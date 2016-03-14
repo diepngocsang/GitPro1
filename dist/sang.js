@@ -124,8 +124,8 @@ angular.module('myProject', ['firebase','ui.router'])
             var confirmAlert = confirm("Do you want to order these products?");
             if (confirmAlert == true) {
                 $scope.postsRef.$add($scope.user);
-                $scope.user=null;
-                $scope.shopcart=[];
+                $scope.user={};
+                $scope.shopcart=[];                
                 $scope.numcart=0;
                 window.alert("Thank you to order our products! We will contact to you as soon as possible to confirm your order!");
                 // change the path
