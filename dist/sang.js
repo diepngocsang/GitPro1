@@ -47,7 +47,7 @@ angular.module('myProject', ['firebase','ui.router'])
                 })
             .state('cart', {   
                         url: '/cart',  // khai báo Url hiển thị
-                        templateUrl: 'my_template/cartproduct.html'                                   
+                        templateUrl: 'my_template/cartproduct.html'
                 })
             .state('img', {   
                         url: '/img/:img',  // khai báo Url hiển thị
@@ -64,6 +64,7 @@ angular.module('myProject', ['firebase','ui.router'])
     .controller("ProductCtrl",['$scope','$firebaseArray','$stateParams',function($scope,$firebaseArray,$stateParams){
          var ref = new Firebase("https://finalassignment.firebaseio.com/product");
          var type = $stateParams.type;
+         $scope.type= type;
          $scope.data = $firebaseArray(ref.orderByChild('type').equalTo(type));
          $scope.nowPage = 0;
          $scope.sizePage = 8;
@@ -84,6 +85,9 @@ angular.module('myProject', ['firebase','ui.router'])
          
     }])    
     .controller('homeController',['$scope','$firebaseArray', function ($scope,$firebaseArray){
+        $scope.collapsein = function() {
+            $('.navbar-collapse').toggleClass('in');
+        }
         $scope.numcart=0;
         $scope.shopcart=[];
         $scope.user={};
@@ -95,7 +99,7 @@ angular.module('myProject', ['firebase','ui.router'])
             }            
         };        
         $scope.addProductItem = function(code){            
-            if($scope.shopcart.indexOf(code)<0){
+            if($scope.shopcart.indexOf(code)<=0){
                 var checkCode = true;
                 code.quantity=1;
                 for (var i = 0;i< $scope.shopcart.length;i++) {
@@ -115,18 +119,13 @@ angular.module('myProject', ['firebase','ui.router'])
         $scope.addCartToFirebase = function(){         
             var ref = new Firebase("https://finalassignment.firebaseio.com/cart/post");
             $scope.postsRef = $firebaseArray(ref);
-//            it('should toggle button', function() {
-//                  expect(element(by.css('button')).getAttribute('disabled')).toBeFalsy();
-//                  element(by.model('checked')).click();
-//                  expect(element(by.css('button')).getAttribute('disabled')).toBeTruthy();
-//            });
             $scope.quantity= $scope.shopcart;
             $scope.user.item = $scope.shopcart;
             var confirmAlert = confirm("Do you want to order these products?");
             if (confirmAlert == true) {
                 $scope.postsRef.$add($scope.user);
-                $scope.user=null;
-                $scope.shopcart=null;
+                $scope.user={};
+                $scope.shopcart=[];                
                 $scope.numcart=0;
                 window.alert("Thank you to order our products! We will contact to you as soon as possible to confirm your order!");
                 // change the path

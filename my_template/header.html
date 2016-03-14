@@ -1,4 +1,3 @@
-<header>
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
@@ -7,28 +6,28 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" runat="server" href="index.html">FASHION</a>
+            <a class="navbar-brand" runat="server" ui-sref="home">FASHION</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="ico-home"><a runat="server" ui-sref="home"><i class="fa fa-home"></i></a></li>
                 <li>
-                    <a style="cursor: pointer" data-toggle="dropdown" runat="server" >Men</a>
+                    <a style="cursor: pointer" data-toggle="dropdown" aria-expanded="false" runat="server">Men</a>
                     <ul class="dropdown-menu fadeIn animated">
-                        <li><a ui-sref="product({type: 'Shirt Men'})"><span><i class="fa fa-chevron-right"></i>Shirt</span></a></li>
-                        <li><a ui-sref="product({type: 'T-shirt Men'})"><span><i class="fa fa-chevron-right"></i>T-shirt</span></a></li>
-                        <li><a ui-sref="product({type: 'Jean Men'})"><span><i class="fa fa-chevron-right"></i>Jean</span></a></li>
-                        <li><a ui-sref="product({type: 'Suit Men'})"><span><i class="fa fa-chevron-right"></i>Suit</span></a></li>
-                        <li><a ui-sref="product({type: 'Pant Men'})"><span><i class="fa fa-chevron-right"></i>Pant</span></a></li>
+                        <li><a ui-sref="product({type: 'Shirt Men'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Shirt</span></a></li>
+                        <li><a ui-sref="product({type: 'T-shirt Men'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>T-shirt</span></a></li>
+                        <li><a ui-sref="product({type: 'Jean Men'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Jean</span></a></li>
+                        <li><a ui-sref="product({type: 'Suit Men'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Suit</span></a></li>
+                        <li><a ui-sref="product({type: 'Pant Men'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Pant</span></a></li>
                     </ul>
                 </li>
                 <li>
                     <a style="cursor: pointer" data-toggle="dropdown" runat="server">Women</a>
                     <ul class="dropdown-menu fadeIn animated">
-                        <li><a ui-sref="product({type: 'Dress Girl'})"><span><i class="fa fa-chevron-right"></i>Dress</span></a></li>
-                        <li><a ui-sref="product({type: 'Jean Girl'})"><span><i class="fa fa-chevron-right"></i>Jean</span></a></li>
-                        <li><a ui-sref="product({type: 'Shirt Girl'})"><span><i class="fa fa-chevron-right"></i>Shirt</span></a></li>
-                        <li><a ui-sref="product({type: 'Suit Girl'})"><span><i class="fa fa-chevron-right"></i>Suit</span></a></li>
+                        <li><a ui-sref="product({type: 'Dress Girl'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Dress</span></a></li>
+                        <li><a ui-sref="product({type: 'Jean Girl'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Jean</span></a></li>
+                        <li><a ui-sref="product({type: 'Shirt Girl'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Shirt</span></a></li>
+                        <li><a ui-sref="product({type: 'Suit Girl'})" ng-click="collapsein()"><span><i class="fa fa-chevron-right"></i>Suit</span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -55,4 +54,3 @@
         <!--Visible,hide navigation-->
     </div>
 </nav>
-</header>

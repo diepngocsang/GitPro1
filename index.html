@@ -9,7 +9,7 @@
     <link href="my_css/sang.css" rel="stylesheet" />
     <link href="animate_css/animate.css" rel="stylesheet" />
     <link href="fa_css/font-awesome.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="imgs/clothes.ico" type="image/x-icon">   
+    <link rel="shortcut icon" href="imgs/clothes.ico" type="image/x-icon">
 </head>
 <body ng-controller="homeController">
     <!--NAVIGATION-->
@@ -21,10 +21,13 @@
     <section ui-view>
     </section>
     <!--END CONTENT-->
-
+    
     <!--FOOTER-->
     <footer footer-directive class="wow container-fluid text-center zoomIn animated">         
     </footer>
+    <p id="back-top">
+        <a href="#top"><span></span>TOP</a>
+    </p>
 </body>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -39,12 +42,10 @@
     wow = new WOW(
       {
         animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
+        offset:       100
       }
     );
     wow.init();
 </script>
+
 </html>
